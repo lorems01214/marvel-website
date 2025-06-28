@@ -1,0 +1,399 @@
+/* Variables de color y tipografía */
+:root {
+    /* Colores Marvel */
+    --marvel-red: #ED1D23;
+    --marvel-dark: #202020;
+    --marvel-blue: #005AFF;
+    --marvel-gold: #FFD700;
+    --marvel-black: #000000;
+    --marvel-white: #FFFFFF;
+    --marvel-gray: #F0F0F0;
+    
+    /* Fuentes */
+    --font-title: 'Garamond Bold', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--marvel-dark);
+    background-color: var(--marvel-gray);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Encabezado */
+.main-header {
+    background-color: var(--marvel-black);
+    color: var(--marvel-white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: auto;
+}
+
+.logo {
+    transform: scale(1.05);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--marvel-white);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--marvel-red);
+    background-color: rgba(237, 29, 36, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Sección de héroes */
+.hero-section {
+    padding: 4rem 0;
+    background: linear-gradient(to right, var(--marvel-black) 0%, var(--marvel-red) 100%);
+    color: var(--marvel-white);
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    color: var(--marvel-red);
+    text-shadow: 3px 3px 0 var(--marvel-black), 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.hero-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hero-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    padding: 1.5rem;
+    background-color: var(--marvel-white);
+    color: var(--marvel-dark);
+}
+
+.hero-card h2 {
+    font-family: var(--font-heading);
+    color: var(--marvel-red);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+/* Estilos específicos para cada tarjeta de héroe */
+.iron-man .hero-content {
+    background-color: #f8f8f8;
+    border-top: 5px solid var(--marvel-red);
+}
+
+.spiderman .hero-content {
+    background-color: #f8f8f8;
+    border-top: 5px solid var(--marvel-blue);
+}
+
+.capitan-america .hero-content {
+    background-color: #f8f8f8;
+    border-top: 5px solid var(--marvel-black);
+}
+
+.thor .hero-content {
+    background-color: #f8f8f8;
+    border-top: 5px solid var(--marvel-blue);
+}
+
+.x-men .hero-content {
+    background-color: #f8f8f8;
+    border-top: 5px solid var(--marvel-black);
+}
+
+.hulk .hero-content {
+    background-color: #f8f8f8;
+    border-top: 5px solid var(--marvel-gold);
+}
+
+/* Sección de películas */
+.movies-section {
+    padding: 4rem 0;
+    background-color: var(--marvel-white);
+    background-image: radial-gradient(circle at 10% 20%, rgba(237, 29, 36, 0.05) 0%, rgba(237, 29, 36, 0.05) 90%);
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--marvel-dark);
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    flex: 1 1 300px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-item h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Colores para cada fase */
+.phase1 {
+    background-color: rgba(237, 29, 36, 0.1);
+    border-left: 5px solid var(--marvel-red);
+}
+
+.phase2 {
+    background-color: rgba(0, 90, 255, 0.1);
+    border-left: 5px solid var(--marvel-blue);
+}
+
+.phase3 {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-left: 5px solid var(--marvel-gold);
+}
+
+.phase4 {
+    background-color: rgba(237, 29, 36, 0.1);
+    border-left: 5px solid var(--marvel-red);
+}
+
+.phase5 {
+    background-color: rgba(0, 90, 255, 0.1);
+    border-left: 5px solid var(--marvel-blue);
+}
+
+.phase6 {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-left: 5px solid var(--marvel-gold);
+}
+
+/* Sección de historia */
+.history-section {
+    padding: 4rem 0;
+    background: linear-gradient(to right, var(--marvel-black) 0%, var(--marvel-red) 100%);
+    color: var(--marvel-white);
+}
+
+.history-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.history-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Pie de página */
+.main-footer {
+    background-color: var(--marvel-dark);
+    color: var(--marvel-white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+}
+
+.footer-section h3 {
+    font-family: var(--font-heading);
+    color: var(--marvel-red);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--marvel-red);
+}
+
+.footer-section p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--marvel-white);
+    background-color: var(--marvel-red);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--marvel-white);
+    color: var(--marvel-red);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
